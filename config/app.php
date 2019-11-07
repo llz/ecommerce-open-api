@@ -177,19 +177,19 @@ return [
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         Milon\Barcode\BarcodeServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
-        Overtrue\LaravelWechat\ServiceProvider::class,
 
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         HieuLe\Active\ActiveServiceProvider::class,
 
         iBrand\Component\Pay\PayServiceProvider::class,
+        iBrand\Backend\BackendServiceProvider::class,
 
-        iBrand\EC\Open\Core\Providers\AppServiceProvider::class,
-        iBrand\EC\Open\Server\Providers\ServerServiceProvider::class,
+        GuoJiangClub\EC\Open\Core\Providers\AppServiceProvider::class,
+        GuoJiangClub\EC\Open\Server\Providers\ServerServiceProvider::class,
 
-        iBrand\EC\Open\Backend\Album\Providers\AlbumBackendServiceProvider::class,
-        iBrand\EC\Open\Backend\Member\Providers\BackendServiceProvider::class,
-        iBrand\EC\Open\Backend\Store\Providers\BackendServiceProvider::class,
+        GuoJiangClub\EC\Open\Backend\Album\Providers\AlbumBackendServiceProvider::class,
+        GuoJiangClub\EC\Open\Backend\Member\Providers\BackendServiceProvider::class,
+        GuoJiangClub\EC\Open\Backend\Store\Providers\BackendServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -252,6 +252,8 @@ return [
 
         'Charge'=> iBrand\Component\Pay\Facades\Charge::class,
         'PayNotify' => iBrand\Component\Pay\Facades\PayNotify::class,
+
+        "BackendMenu"=> iBrand\Backend\Facades\Menu::class,
     ],
 
 ];

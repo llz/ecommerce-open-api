@@ -12,16 +12,18 @@
 	"type": "project",
 	"require": {
 		"php": ">=7.0.0",
-		"barryvdh/laravel-cors": "^0.10",
+		"barryvdh/laravel-cors": "^0.11.2",
+		"encore/laravel-admin": "1.5.19",
 		"dingo/api": "2.0.0-alpha1",
 		"fideloper/proxy": "~3.3",
-		"ibrand/backend": "~3.0",
 		"ibrand/laravel-active": "~2.0",
 		"ibrand/laravel-miniprogram-poster": "^1.1",
 		"ibrand/laravel-shopping-cart": "^1.3",
 		"ibrand/laravel-sms": "~1.0",
+		"ibrand/common": "~1.2",
+		"ibrand/backend": "dev-guojiang",
 		"ibrand/laravel-ueditor": "^1.0",
-		"ibrand/pay": "^0.1.1",
+		"ibrand/pay": "~0.2",
 		"ibrand/setting": "^1.1",
 		"intervention/image": "^2.3",
 		"jenssegers/agent": "^2.4",
@@ -36,7 +38,7 @@
 		"marktopper/doctrine-dbal-timestamp-type": "^1.0",
 		"milon/barcode": "^5.3",
 		"overtrue/laravel-uploader": "~0.0.7",
-		"overtrue/laravel-wechat": "~4.0",
+		"overtrue/wechat":"^4.2",
 		"predis/predis": "1.*",
 		"prettus/l5-repository": "^2.1",
 		"qiniu/php-sdk": "^7.0",
@@ -76,11 +78,12 @@
 				"modules/EC.Open.Backend/*/composer.json",
 				"modules/component/*/composer.json"
 			],
-			"recurse": true,
-			"replace": false,
+			"recurse": false,
+			"replace": true,
+			"ignore-duplicates": true,
 			"merge-dev": true,
-			"merge-extra": false,
-			"merge-extra-deep": false
+			"merge-extra": true,
+			"merge-extra-deep": true
 		},
 		"laravel": {
 			"dont-discover": [
@@ -110,7 +113,7 @@
 		},
 		{
 			"type": "composer",
-			"url": "https://packagist.laravel-china.org"
+			"url": "https://mirrors.aliyun.com/composer/"
 		}
 	]
 }

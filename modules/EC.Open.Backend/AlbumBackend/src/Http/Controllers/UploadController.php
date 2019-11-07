@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 2017/3/10
- * Time: 14:08
- */
 
-namespace iBrand\EC\Open\Backend\Album\Http\Controllers;
+namespace GuoJiangClub\EC\Open\Backend\Album\Http\Controllers;
 
 use Illuminate\Http\Request;
 use iBrand\Backend\Http\Controllers\Controller;
@@ -85,7 +79,7 @@ class UploadController extends Controller
 
     protected function formatDir()
     {
-        $directory = config('dmp-file-manage.dir', '{Y}/{m}/{d}');
+        $directory = config('ibrand.file-manage.dir', '{Y}/{m}/{d}');
         $replacements = [
             '{Y}' => date('Y'),
             '{m}' => date('m'),
@@ -101,7 +95,7 @@ class UploadController extends Controller
     {
         $size = $file->getClientSize() / 1024;
 
-        if ($size > config('dmp-file-manage.size', 2) * 1024) {
+        if ($size > config('ibrand.file-manage.size', 2) * 1024) {
             return false;
         }
         return true;
@@ -109,7 +103,7 @@ class UploadController extends Controller
 
     protected function maxNum($num)
     {
-        if ($num > config('dmp-file-manage.num', 5)) {
+        if ($num > config('ibrand.file-manage.num', 5)) {
             return false;
         }
         return true;
@@ -117,7 +111,7 @@ class UploadController extends Controller
 
     protected function mines($extension)
     {
-        if (in_array($extension, config('dmp-file-manage.mines', ['jpg', 'jpeg', 'png', 'bmp', 'gif']))) {
+        if (in_array($extension, config('ibrand.file-manage.mines', ['jpg', 'jpeg', 'png', 'bmp', 'gif']))) {
             return true;
         }
         return false;

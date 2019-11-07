@@ -3,15 +3,15 @@
 /*
  * This file is part of ibrand/product.
  *
- * (c) iBrand <https://www.ibrand.cc>
+ * (c) 果酱社区 <https://guojiang.club>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace iBrand\Component\Product\Models;
+namespace GuoJiangClub\Component\Product\Models;
 
-use iBrand\Component\Product\Brand;
+use GuoJiangClub\Component\Product\Brand;
 use Illuminate\Database\Eloquent\Model as LaravelModel;
 
 class Goods extends LaravelModel

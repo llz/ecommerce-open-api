@@ -3,18 +3,18 @@
 /*
  * This file is part of ibrand/EC-Open-Server.
  *
- * (c) iBrand <https://www.ibrand.cc>
+ * (c) 果酱社区 <https://guojiang.club>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace iBrand\EC\Open\Server\Http\Controllers;
+namespace GuoJiangClub\EC\Open\Server\Http\Controllers;
 
-use iBrand\Component\User\Repository\UserBindRepository;
-use iBrand\Component\User\Repository\UserRepository;
-use iBrand\EC\Open\Core\Auth\User;
-use iBrand\Component\User\UserService;
+use GuoJiangClub\Component\User\Repository\UserBindRepository;
+use GuoJiangClub\Component\User\Repository\UserRepository;
+use GuoJiangClub\EC\Open\Core\Auth\User;
+use GuoJiangClub\Component\User\UserService;
 use iBrand\Sms\Facade as Sms;
 
 class AuthController extends Controller
@@ -56,7 +56,7 @@ class AuthController extends Controller
         $token = $user->createToken($mobile)->accessToken;
 
         //2. bind user bind data to user.
-        $this->userService->bindPlatform($user->id, request('open_id'), config('wechat.mini_program.default.app_id'), 'miniprogram');
+        $this->userService->bindPlatform($user->id, request('open_id'), config('ibrand.wechat.mini_program.default.app_id'), 'miniprogram');
 
         return $this->success(['token_type' => 'Bearer', 'access_token' => $token, 'is_new_user' => $is_new]);
     }

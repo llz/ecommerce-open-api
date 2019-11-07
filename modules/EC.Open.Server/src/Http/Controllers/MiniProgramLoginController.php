@@ -3,18 +3,18 @@
 /*
  * This file is part of ibrand/EC-Open-Server.
  *
- * (c) iBrand <https://www.ibrand.cc>
+ * (c) 果酱社区 <https://guojiang.club>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace iBrand\EC\Open\Server\Http\Controllers;
+namespace GuoJiangClub\EC\Open\Server\Http\Controllers;
 
-use iBrand\Component\User\Repository\UserBindRepository;
-use iBrand\Component\User\Repository\UserRepository;
-use iBrand\Component\User\UserService;
-use EasyWeChat;
+use GuoJiangClub\Component\User\Repository\UserBindRepository;
+use GuoJiangClub\Component\User\Repository\UserRepository;
+use GuoJiangClub\Component\User\UserService;
+use iBrand\Common\Wechat\Factory;
 
 class MiniProgramLoginController extends Controller
 {
@@ -37,7 +37,7 @@ class MiniProgramLoginController extends Controller
             return $this->failed('缺失code');
         }
 
-        $miniProgram = EasyWeChat::miniProgram();
+        $miniProgram = Factory::miniProgram();
 
         $result = $miniProgram->auth->session($code);
 
@@ -50,7 +50,7 @@ class MiniProgramLoginController extends Controller
         //1. openid 不存在相关用户和记录，直接返回 openid
         if (!$userBind = $this->userBindRepository->getByOpenId($openid)) {
             $userBind = $this->userBindRepository->create(['open_id' => $openid, 'type' => 'miniprogram',
-                'app_id' => config('wechat.mini_program.default.app_id'),]);
+                'app_id' => config('ibrand.wechat.mini_program.default.app_id'),]);
 
             return $this->success(['open_id' => $openid]);
         }
@@ -70,7 +70,7 @@ class MiniProgramLoginController extends Controller
 
     public function mobileLogin()
     {
-        $miniProgram = EasyWeChat::miniProgram();
+        $miniProgram = Factory::miniProgram();
 
         //1. get session key.
         $code = request('code');
@@ -101,7 +101,7 @@ class MiniProgramLoginController extends Controller
 
         $token = $user->createToken($user->id)->accessToken;
 
-        $this->userService->bindPlatform($user->id, request('open_id'), config('wechat.mini_program.default.app_id'), 'miniprogram');
+        $this->userService->bindPlatform($user->id, request('open_id'), config('ibrand.wechat.mini_program.default.app_id'), 'miniprogram');
 
         return $this->success(['token_type' => 'Bearer', 'access_token' => $token]);
     }
@@ -113,7 +113,7 @@ class MiniProgramLoginController extends Controller
             return $this->failed('缺失code');
         }
 
-        $miniProgram = EasyWeChat::miniProgram();
+        $miniProgram = Factory::miniProgram();
 
         $result = $miniProgram->auth->session($code);
 

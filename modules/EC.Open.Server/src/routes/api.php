@@ -3,7 +3,7 @@
 /*
  * This file is part of ibrand/EC-Open-Server.
  *
- * (c) iBrand <https://www.ibrand.cc>
+ * (c) 果酱社区 <https://guojiang.club>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -23,6 +23,7 @@ $router->get('store/detail/{id}/share/img', 'GoodsController@shareImg')->name('a
 
 $router->get('home', 'HomeController@index')->name('api.home.index');
 $router->get('category', 'HomeController@category')->name('api.home.category');
+$router->get('micro/page/{code}', 'MicroPageController@index')->name('api.micro.page.index');
 
 $router->post('wechat/notify', 'WechatPayNotifyController@notify');
 

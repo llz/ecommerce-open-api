@@ -1,16 +1,21 @@
-# iBrand E-Commerce open source project
+# 果酱小店开源电商系统
 
-iBrand EC 是一个免费的开源电子商务解决方案，使用 PHP 基于 Laravel 框架进行编写。基于模块化开发，易扩展，可基于个性需求快速实现定制化需求，功能符合国内电商绝大部分使用场景。
+果酱小店是一个免费的开源电子商务解决方案，使用 PHP 基于 Laravel 框架进行编写。基于模块化开发，易扩展，可基于个性需求快速实现定制化需求，功能符合国内电商绝大部分使用场景。
 
 > 基于目前移动互联网的发展趋势，目前只提供 API 和 后端管理，不提供PC端商城。如有需要可理解项目架构后自行实现。
 
-管理后台：[iBrand e-commerce admin]( https://demo-open-admin.ibrand.cc/admin)
+管理后台：[果酱小店管理后台]( https://demo-open-admin.ibrand.cc/admin)
 
-后台账号密码请关注公众号 [iBrand社交新零售](https://iyoyo.oss-cn-hangzhou.aliyuncs.com/post/wechat.jpg)  (微信号：ibrand_cc) ，并回复关键词：password 获取。
+后台账号密码请关注公众号 [PHP果酱](https://iyoyo.oss-cn-hangzhou.aliyuncs.com/post/wechat.jpg)  (微信号：phpjam) ，并回复关键词：password 获取。
 
 扫码体验小程序：
 
-![体验小店](https://iyoyo.oss-cn-hangzhou.aliyuncs.com/post/miniprogramcode/1.jpg)
+![体验小店](https://iyoyo.oss-cn-hangzhou.aliyuncs.com/post/miniprogramcode/ec.qrcode.png)
+
+## 更新计划
+1. 9月份预计更新拼团，分销以及微页面功能
+2. 10月预计更新砍价功能
+3. 11月预计更新 swoole 版本
 
 ## 更新日志
 
@@ -22,12 +27,12 @@ iBrand EC 是一个免费的开源电子商务解决方案，使用 PHP 基于 L
 
 ## 小程序
 
-小程序端源码在此：[miniprogram-open-source](https://github.com/ibrandcc/miniprogram-ecommerce-open-source)
+小程序端源码在此：[miniprogram-open-source](https://github.com/guojiangclub/miniprogram-ecommerce-open-source)
 
 ## 文档
-- [Wiki](https://github.com/ibrandcc/ecommerce-open-api/wiki)
-- [API 文档](https://www.ibrand.cc/docs/api/)
-- [iBrand 电商系统教程](https://www.ibrand.cc/open/article)
+- [Wiki](https://github.com/guojiangclub/ecommerce-open-api/wiki)
+- [API 文档](https://guojiangclub/docs/api/)
+- [配套小册](https://www.ibrand.cc/open/article)
 - [设计稿](https://lanhuapp.com/url/v7Bfb)  密码： YgK7
 
 ## 特性
@@ -45,16 +50,16 @@ iBrand EC 是一个免费的开源电子商务解决方案，使用 PHP 基于 L
 
 该项目正在持续迭代更新中，如果你想参与到本项目中来，请提交 Pull Request !
 
-如果你发现任何问题或者需求，请[提交ISSUE](https://github.com/ibrandcc/ecommerce-open-api/issues)
+如果你发现任何问题或者需求，请[提交ISSUE](https://github.com/guojiangclub/ecommerce-open-api/issues)
 
 ## 开源系列
 
-[Laravel 社交电商](https://github.com/ibrandcc/ecommerce-open-api)    ·    [社交电商微信小程序](https://github.com/ibrandcc/miniprogram-ecommerce-open-source)    ·  [微信第三方平台](https://github.com/ibrandcc/laravel-wechat-platform)
+[Laravel 社交电商](https://github.com/guojiangclub/ecommerce-open-api)    ·    [社交电商微信小程序](https://github.com/guojiangclub/miniprogram-ecommerce-open-source)    ·  [微信第三方平台](https://github.com/guojiangclub/laravel-wechat-platform)
 
 ## 社交账号
 
-[Laravel-China](https://laravel-china.org/ibrand)   ·  [掘金](https://juejin.im/user/5aab2cfa518825556534407a/posts)    ·  [segmentfault](https://segmentfault.com/u/ibrand)  
+[Laravel-China](https://learnku.com/blog/ibrand)   ·  [掘金](https://juejin.im/user/5aab2cfa518825556534407a/posts)    ·  [segmentfault](https://segmentfault.com/u/guojiang_club)  
 
 ## 讨论交流
 
-![iBrand联系我们](https://iyoyo.oss-cn-hangzhou.aliyuncs.com/post/qrcode.jpg)
+![联系我们](https://iyoyo.oss-cn-hangzhou.aliyuncs.com/post/qrcodenew.jpg)
